@@ -5,7 +5,6 @@ files:
     destination: /app/step2/zip
     overwrite: yes
 
-
 permissions:
   - object: /
     pattern: "**"
