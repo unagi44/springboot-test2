@@ -27,6 +27,15 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/signin")
+    public String signin(Model model, @LoginUser SessionUser user)
+    {
+        model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null)
+            return "redirect:/";
+        return "signin";
+    }
+
     @GetMapping("/posts/save")
     public String postsSave()
     {
